@@ -34,6 +34,7 @@ function AddProducts({ products }) {
     try {
       await axios.delete(`https://e-commerce-backend-1k7q.onrender.com/api/user/DeleteProduct/${product}`);
       window.location.reload();
+      navigate("/Home")
     } catch (error) {
       console.log(error)
     }
