@@ -1,9 +1,7 @@
 import db from "../../ds.js";
 import jwt from "jsonwebtoken";
-
-import bcrypt, { hash } from "bcrypt";
 import { v4 as uuidv4 } from "uuid";
-
+import bcrypt from 'bcryptjs';
 // user
 
 const createUser = async (req, res) => {
@@ -12,7 +10,8 @@ const createUser = async (req, res) => {
 
     const userId = uuidv4();
 
-    const hashedPassword = await bcrypt.hash(password, 10);
+    const salt = bcrypt.genSaltSync(10);
+    const hashedPassword = bcrypt.hashSync(password, salt)
 
     const response = await db.query(
       "INSERT INTO userdata (id, email, password) VALUES ($1,$2,$3)",
@@ -43,7 +42,7 @@ const LoginUser = async (req, res) => {
 
     if (response.rows.length > 0) {
       const user = response.rows[0];
-      const match = await bcrypt.compare(password, user.password);
+      const match = bcrypt.compareSync(password, user.password);
 
       const token = jwt.sign({ email, email }, "mavex", { expiresIn: "1h" });
 
@@ -72,7 +71,10 @@ const CreateSeller = async (req, res) => {
 
     const userId = uuidv4();
 
-    const hashedPassword = await bcrypt.hash(password, 10);
+    // const hashedPassword = await bcrypt.hash(password, 10);
+
+    const salt = bcrypt.genSaltSync(10);
+    const hashedPassword = bcrypt.hashSync(password, salt)
 
     const response = await db.query(
       "INSERT INTO seller (id, name, email, password, gst_number) VALUES ($1, $2, $3, $4, $5)",
@@ -108,7 +110,7 @@ const LoginSeller = async (req, res) => {
 
     if (response.rows.length > 0) {
       const user = response.rows[0];
-      const match = await bcrypt.compare(password, user.password);
+      const match = bcrypt.compareSync(password, user.password);
 
       const token = jwt.sign({ email, email }, "mavex", { expiresIn: "1h" });
 
