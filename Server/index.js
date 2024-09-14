@@ -22,8 +22,19 @@ const targetDir = path.join('..',"Client","E-Commerce"); // Move up two levels a
 // Resolve the absolute path to the target directory
 const absoluteTargetPath = path.resolve(currentDir, targetDir);
 
+// change
 
-const uploadDir = path.join(absoluteTargetPath, 'src/assets/uploads');
+
+// const uploadDir = path.join(absoluteTargetPath, 'src/assets/uploads');
+
+
+const uploadDir = '/tmp/uploads';
+
+
+
+
+
+
 // console.log(uploadDir)
 
 // Ensure the uploads directory exists
@@ -32,7 +43,23 @@ if (!fs.existsSync(uploadDir)) {
     fs.mkdirSync(uploadDir, { recursive: true });
 }
 
-const upload = multer({ dest: uploadDir });
+// change
+
+// const upload = multer({ dest: uploadDir });
+
+
+const upload = multer({
+    storage: multer.diskStorage({
+        destination: function (req, file, cb) {
+            cb(null, uploadDir);
+        },
+        filename: function (req, file, cb) {
+            cb(null, file.originalname);
+        }
+    })
+});
+
+
 
 const corsOption = {
     origin: "http://localhost:5173",
