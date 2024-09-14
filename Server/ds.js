@@ -47,11 +47,11 @@ const poolCongig = {
   IdleDeadline: 600000,
 }
 
-const DataBase = process.env.PG_DATABASE;
-const UserName = process.env.PG_USER;
-const Password = process.env.PG_PASSWORD;
-const Host = process.env.PG_HOST;
-const Port = process.env.PG_PORT;
+const DataBase = "e_commerce_database_lqsm";
+const UserName = "e_commerce_database_lqsm_user";
+const Password = "g4pa2YMq26Iuc00l7Q8yS5ew13JJZZAg";
+const Host = "dpg-criol3u8ii6s73f7bu40-a";
+const Port = "5432";
 
 poolCongig.connectionString = `postgres://${UserName}:${Password}@${Host}:${Port}/${DataBase}`;
 
