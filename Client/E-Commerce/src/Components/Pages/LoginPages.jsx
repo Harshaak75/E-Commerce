@@ -10,7 +10,7 @@ function LoginPages() {
 
   const login = async (values,actions) =>{
     try {
-      const response = await axios.post("http://localhost:8080/api/user/loginUser", {
+      const response = await axios.post("https://e-commerce-backend-1k7q.onrender.com/api/user/loginUser", {
         email: values.email,
         password: values.password
       }, {

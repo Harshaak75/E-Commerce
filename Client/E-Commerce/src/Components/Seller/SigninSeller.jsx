@@ -11,7 +11,7 @@ function SigninSeller() {
 
     const onSubmit = async (values, actions) => {
         try {
-            await axios.post("http://localhost:8080/api/user/createSellerAccount",{
+            await axios.post("https://e-commerce-backend-1k7q.onrender.com/api/user/createSellerAccount",{
                 name: values.name,
                 email: values.email,
                 password: values.password,

@@ -17,7 +17,7 @@ function AddProducts({ products }) {
 
   const fetchProducts = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/api/user/getProducts");
+      const response = await axios.get("https://e-commerce-backend-1k7q.onrender.com/api/user/getProducts");
       setProducts(response.data.products);
     } catch (error) {
       console.error('Error fetching products:', error);
@@ -32,7 +32,7 @@ function AddProducts({ products }) {
 
   const handleDelete = async (product) => {
     try {
-      await axios.delete(`http://localhost:8080/api/user/DeleteProduct/${product}`);
+      await axios.delete(`https://e-commerce-backend-1k7q.onrender.com/api/user/DeleteProduct/${product}`);
       window.location.reload();
     } catch (error) {
       console.log(error)
@@ -59,7 +59,7 @@ function AddProducts({ products }) {
         const decodedToken = jwtDecode(token);
         console.log(decodedToken.email); // This will contain the token's payload
 
-        await axios.post("http://localhost:8080/api/user/checkSeller", {
+        await axios.post("https://e-commerce-backend-1k7q.onrender.com/api/user/checkSeller", {
           email: decodedToken.email
         },
           {
@@ -110,7 +110,7 @@ function AddProducts({ products }) {
       {products && products.length > 0 ? (
         products.map((product, index) => (
           <div key={index} className=" w-[22rem] h-[40rem] p-4 text-black rounded-lg flex flex-col">
-            <img src={`http://localhost:8080${product.image}`} alt={product.name} className=" w-full h-[23rem] object-cover rounded-md" />
+            <img src={`https://e-commerce-backend-1k7q.onrender.com${product.image}`} alt={product.name} className=" w-full h-[23rem] object-cover rounded-md" />
             <h1 className="text-2xl font-bold mt-4 font-roboto whitespace-nowrap overflow-hidden text-ellipsis">{product.name}</h1>
             <p className="text-lg font-bold font-manrope opacity-55">{product.category}</p>
             <p className="mt-1 font-roboto font-medium">⭐ {product.ratings}</p>

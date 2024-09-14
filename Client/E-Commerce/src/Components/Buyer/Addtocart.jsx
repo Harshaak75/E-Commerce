@@ -46,7 +46,7 @@ function Addtocart() {
                             <div key={id} class="flex gap-4 bg-white px-4 py-6 rounded-md shadow-[0_2px_12px_-3px_rgba(6,81,237,0.3)]">
                                 <div class="flex gap-4">
                                     <div class="w-28 h-28 max-sm:w-24 max-sm:h-24 shrink-0">
-                                        <img src={`http://localhost:8080${item.img}`} alt='img' class="w-full h-full object-contain" />
+                                        <img src={`https://e-commerce-backend-1k7q.onrender.com${item.img}`} alt='img' class="w-full h-full object-contain" />
                                     </div>
                                     <div class="flex flex-col gap-4">
                                         <div>

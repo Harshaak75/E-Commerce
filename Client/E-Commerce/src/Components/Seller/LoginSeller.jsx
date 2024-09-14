@@ -14,7 +14,7 @@ function LoginSeller() {
     const login = async (values, actions) => {
 
         try {
-            await axios.post("http://localhost:8080/api/user/loginSeller", {
+            await axios.post("https://e-commerce-backend-1k7q.onrender.com/api/user/loginSeller", {
                 email: values.email,
                 password: values.password
             }, {

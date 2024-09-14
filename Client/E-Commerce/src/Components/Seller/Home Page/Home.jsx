@@ -13,7 +13,7 @@ function Home() {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/api/user/getProducts")
+        const response = await axios.get("https://e-commerce-backend-1k7q.onrender.com/api/user/getProducts")
         setproducts(response.data.products)
 
         console.log(response.data.products[0].image)

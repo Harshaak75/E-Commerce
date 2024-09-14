@@ -21,7 +21,7 @@ function UpdateForm({ product, onUpdate, onClose }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:8080/api/user/Updateproduct/${updatedProduct.id}`, updatedProduct);
+      await axios.put(`https://e-commerce-backend-1k7q.onrender.com/api/user/Updateproduct/${updatedProduct.id}`, updatedProduct);
       window.location.reload();
     } catch (error) {
       console.error('Error updating product:', error);

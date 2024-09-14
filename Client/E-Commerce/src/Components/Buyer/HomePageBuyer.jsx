@@ -103,7 +103,7 @@ function HomePageBuyer() {
                 {filteredProducts && filteredProducts.length > 0 ? (
                     filteredProducts.map((product, index) => (
                         <div key={index} className="box1 w-[22rem] h-[40rem] p-4 text-black rounded-lg flex flex-col">
-                            <img src={`http://localhost:8080${product.image}`} alt={product.name} className=" w-full h-[23rem] object-cover object-top  rounded-md" />
+                            <img src={`https://e-commerce-backend-1k7q.onrender.com${product.image}`} alt={product.name} className=" w-full h-[23rem] object-cover object-top  rounded-md" />
                             <h1 className="text-3xl font-bold mt-4 font-roboto whitespace-nowrap overflow-hidden text-ellipsis">{product.name}</h1>
                             <p className="text-lg font-bold font-manrope opacity-55">{product.category}</p>
                             <p className="mt-1 font-roboto font-medium">⭐ {product.ratings}</p>

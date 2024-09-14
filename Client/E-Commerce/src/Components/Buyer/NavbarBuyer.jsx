@@ -24,46 +24,46 @@ function NavbarBuyer() {
 
     // animation
 
-    //     useGSAP(() => {
+        useGSAP(() => {
 
 
-    //         gsap.from(".navbar", {
-    //             y: -100,
-    //             duration: 2,
-    //             ease: "power4.inOut",
-    //             delay: 0.2
-    //         })
+            gsap.from(".navbar", {
+                y: -100,
+                duration: 2,
+                ease: "power4.inOut",
+                delay: 0.2
+            })
 
-    //         gsap.to(".navbar", {
-    //             y: 0,
-    //             duration: 2,
-    //             ease: "power4.inOut",
-    //             delay: 0.2,
-    //         })
+            gsap.to(".navbar", {
+                y: 0,
+                duration: 2,
+                ease: "power4.inOut",
+                delay: 0.2,
+            })
 
-    //         gsap.from(".title", {
-    //             y: -100,
-    //             opacity: 0,
-    //             duration: 1,
-    //             delay: 1.5,
-    //             stagger: 0.2,
-    //             ease: "power4.Out",
-    //         })
-    //         gsap.to(".title", {
-    //             y: 0,
-    //             duration: 1,
-    //             stagger: 0.2,
-    //             delay: 1.5,
-    //             ease: "power4.Out",
-    //         })
+            gsap.from(".title", {
+                y: -100,
+                opacity: 0,
+                duration: 1,
+                delay: 1.5,
+                stagger: 0.2,
+                ease: "power4.Out",
+            })
+            gsap.to(".title", {
+                y: 0,
+                duration: 1,
+                stagger: 0.2,
+                delay: 1.5,
+                ease: "power4.Out",
+            })
 
-    //         gsap.to(".border", {
-    //             width: "100%",  // move from 0 to full width
-    //             duration: 1,
-    //             ease: "power4.inOut",
-    //             delay: 3,
-    //         });
-    // }, [])
+            gsap.to(".border", {
+                width: "100%",  // move from 0 to full width
+                duration: 1,
+                ease: "power4.inOut",
+                delay: 3,
+            });
+    }, [])
 
     // Navbar component
 
