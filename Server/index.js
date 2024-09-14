@@ -64,7 +64,7 @@ const upload = multer({
 
 
 const corsOption = {
-    origin: "http://localhost:5173",
+    origin: "https://e-commerce-frontend-klxu.onrender.com",
     credentials: true
 }
 
