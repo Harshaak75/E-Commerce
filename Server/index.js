@@ -25,10 +25,10 @@ const absoluteTargetPath = path.resolve(currentDir, targetDir);
 // change
 
 
-// const uploadDir = path.join(absoluteTargetPath, 'src/assets/uploads');
+const uploadDir = path.join(absoluteTargetPath, 'src/assets/tmp/uploads');
 
 
-const uploadDir = '/tmp/uploads';
+// const uploadDir = '/tmp/uploads';
 
 
 
