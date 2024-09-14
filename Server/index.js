@@ -9,6 +9,8 @@ import db from "./ds.js";
 
 const app = express();
 
+const port = process.env.PORT || 8080;
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -109,6 +111,6 @@ app.post("/upload", upload.single('image'), async (req, res) => {
 
 // server is running on 8080 port
 
-app.listen(8080, () => {
+app.listen(port, () => {
     console.log("Server is running on port 8080"); // Server is listening on port 8080
   });
