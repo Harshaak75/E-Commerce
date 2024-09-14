@@ -32,7 +32,10 @@
 
 
 
-import { Pool } from 'pg'; // Use Pool for connection pooling
+import pg from 'pg'; // Use Pool for connection pooling
+const { Pool } = pg;
+
+
 import dotenv from 'dotenv';
 
 dotenv.config(); // Load environment variables from .env file
