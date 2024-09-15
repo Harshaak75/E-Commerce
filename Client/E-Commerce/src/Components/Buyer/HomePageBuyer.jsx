@@ -79,23 +79,23 @@ function HomePageBuyer() {
     })
 
     return (
-        <div>
+        <div className='w-[100%] overflow-hidden'>
             <NavbarBuyer />
 
             {/* SEARCH BAR */}
 
             <form action="" method="post">
-                <div class="search-bar">
+                <div class="search-bar max-md:w-[90%] max-md:h-12 max-md:translate-x-0 max-md:ml-[5%] md:translate-x-0 md:w-[60%] md:ml-[22%]">
                     <span class="material-symbols-outlined text-3xl text-white">
                         search
                     </span>
-                    <input autoComplete="off" type="text" placeholder="Search for Products" className="search-item text-white font-manrope" name="item" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
+                    <input autoComplete="off" type="text" placeholder="Search for Products" className="search-item max-md:w-[100%] max-md:h-10 text-white font-manrope" name="item" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
                 </div>
             </form>
 
             {/* DEAL */}
 
-            <h1 className='heading text-5xl font-roboto mt-16 pl-[10.8%] font-bold'>Today's Deal</h1>
+            <h1 className='heading text-5xl font-roboto mt-16 pl-[10.8%] font-bold max-md:text-[2rem]'>Today's Deal</h1>
 
             {/* list of items */}
 
@@ -111,7 +111,7 @@ function HomePageBuyer() {
                             <button className='text-sm px-4 mt-5 py-2.5 w-full font-semibold tracking-wide bg-gray-800 hover:bg-gray-900 text-white rounded-md' onClick={() => handleAddToCart(product)}>Add to Cart</button>
                         </div>
                     ))
-                ) : (<p className='no-product text-xl font-semibold'>No Products listed</p>
+                ) : (<p className='no-product text-xl font-semibold max-md:text-[1rem]'>No Products listed</p>
                 )}
 
             </div>
