@@ -109,7 +109,7 @@ function AddProducts({ products }) {
       {/* add here */}
       {products && products.length > 0 ? (
         products.map((product, index) => (
-          <div key={index} className=" w-[22rem] h-[40rem] p-4 text-black rounded-lg flex flex-col">
+          <div key={index} className=" w-[22rem] h-[40rem] max-md:w-[19rem] max-md:h-[35rem] max-md:justify-center p-4 text-black rounded-lg flex flex-col">
             <img src={`https://e-commerce-backend-1k7q.onrender.com${product.image}`} alt={product.name} className=" w-full h-[23rem] object-cover rounded-md" />
             <h1 className="text-2xl font-bold mt-4 font-roboto whitespace-nowrap overflow-hidden text-ellipsis">{product.name}</h1>
             <p className="text-lg font-bold font-manrope opacity-55">{product.category}</p>

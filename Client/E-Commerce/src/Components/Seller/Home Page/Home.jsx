@@ -53,7 +53,7 @@ function Home() {
         
 
         <div className="h-[15rem] overflow-hidden flex flex-col items-center justify-center text-5xl font-manrope font-semibold">
-          <h1 className='add whitespace-nowrap'>ADD PRODUCTS</h1>
+          <h1 className='add whitespace-nowrap max-md:text-[2rem]'>ADD PRODUCTS</h1>
         </div>
 
 
