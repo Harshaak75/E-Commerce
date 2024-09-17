@@ -5,6 +5,7 @@ import AddProducts from '../AddProducts'
 import gsap from 'gsap'
 import axios from 'axios'
 import { useGSAP } from '@gsap/react'
+import { url } from '../../info'
 
 function Home() {
 
@@ -13,7 +14,7 @@ function Home() {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get("https://e-commerce-backend-1k7q.onrender.com/api/user/getProducts")
+        const response = await axios.get(`${url}/api/user/getProducts`)
         setproducts(response.data.products)
 
         console.log(response.data.products[0].image)

@@ -4,6 +4,7 @@ import CustomInput from '../Custom Components/CustomInputs'
 import { Formik, Field, Form } from "formik";
 import { Link } from 'react-router-dom'
 import axios from 'axios';
+import { url } from '../info';
 
 function AddProductPage() {
 
@@ -22,7 +23,7 @@ function AddProductPage() {
 
 
         try {
-            await axios.post("https://e-commerce-backend-1k7q.onrender.com/upload", formData, {
+            await axios.post(`${url}/upload`, formData, {
                 headers: {
                     "Content-Type": "multipart/form-data", // Correct content type for file uploads
                 },

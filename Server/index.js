@@ -61,7 +61,7 @@ const upload = multer({
     })
 });
 
-
+// https://e-commerce-frontend-klxu.onrender.com
 
 const corsOption = {
     origin: "https://e-commerce-frontend-klxu.onrender.com",

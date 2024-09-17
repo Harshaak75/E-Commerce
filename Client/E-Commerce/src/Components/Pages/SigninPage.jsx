@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import { userLoggedIn } from '../Schema/Slice'
 import { useNavigate } from 'react-router-dom'
+import { url } from '../info'
 
 function SigninPage() {
 
@@ -17,7 +18,7 @@ function SigninPage() {
     const onSubmit = async (values, actions) => {
 
         try {
-            await axios.post("https://e-commerce-backend-1k7q.onrender.com/api/user/createAccount", {
+            await axios.post(`${url}/api/user/createAccount`, {
                 email: values.email,
                 password: values.password
             },

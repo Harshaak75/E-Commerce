@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Form, Formik } from "formik"
 import axios from 'axios'
+import { url } from '../info'
 
 import CustomInput from '../Custom Components/CustomInputs'
 
@@ -10,7 +11,7 @@ function LoginPages() {
 
   const login = async (values,actions) =>{
     try {
-      const response = await axios.post("https://e-commerce-backend-1k7q.onrender.com/api/user/loginUser", {
+      const response = await axios.post(`${url}/api/user/loginUser`, {
         email: values.email,
         password: values.password
       }, {

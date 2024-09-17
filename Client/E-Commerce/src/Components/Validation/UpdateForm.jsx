@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { url } from '../info';
 
 function UpdateForm({ product, onUpdate, onClose }) {
   const [updatedProduct, setUpdatedProduct] = useState(product);
@@ -21,7 +22,7 @@ function UpdateForm({ product, onUpdate, onClose }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`https://e-commerce-backend-1k7q.onrender.com/api/user/Updateproduct/${updatedProduct.id}`, updatedProduct);
+      await axios.put(`${url}/api/user/Updateproduct/${updatedProduct.id}`, updatedProduct);
       window.location.reload();
     } catch (error) {
       console.error('Error updating product:', error);

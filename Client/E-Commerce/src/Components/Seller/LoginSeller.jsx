@@ -6,6 +6,7 @@ import CustomInput from '../Custom Components/CustomInputs'
 
 import { SellerLogin } from '../Validation/Validate'
 import { useNavigate } from 'react-router-dom'
+import { url } from '../info'
 
 function LoginSeller() {
 
@@ -14,7 +15,7 @@ function LoginSeller() {
     const login = async (values, actions) => {
 
         try {
-            await axios.post("https://e-commerce-backend-1k7q.onrender.com/api/user/loginSeller", {
+            await axios.post(`${url}/api/user/loginSeller`, {
                 email: values.email,
                 password: values.password
             }, {
