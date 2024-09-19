@@ -32,13 +32,6 @@ const uploadDir = path.join(absoluteTargetPath, 'src/assets/tmp/uploads');
 
 // const uploadDir = '/tmp/uploads';
 
-
-
-
-
-
-// console.log(uploadDir)
-
 // Ensure the uploads directory exists
 
 if (!fs.existsSync(uploadDir)) {
